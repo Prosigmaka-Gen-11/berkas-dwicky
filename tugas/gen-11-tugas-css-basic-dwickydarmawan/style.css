@@ -1,0 +1,300 @@
+.top-nav {
+    text-align: center;
+    position: fixed;
+    top: 5px;
+    right: 50%;
+    transform: translateX(50%);
+    background-color: rgb(255, 136, 0);
+    padding: 10px 20px;
+    color: white;
+    border-radius: 20px;
+}
+
+.title {
+    font-family: "Open Sans";
+    font-weight: bold;
+    margin-top: 50px ;
+}
+
+.css-color {
+    color: rgb(106, 90, 205);
+    background-color: blanchedalmond;
+}
+
+.bg-color{
+    background-color: brown;
+    color: white;
+}
+
+.bg-image {
+    height: 400px;
+    width: 50%;
+    background-image: url("https://img.freepik.com/free-vector/group-people-illustration-set_52683-33806.jpg?w=360");
+}
+
+.bg-repeat {
+    margin-top: 100px;
+    height: 400px;
+    width: 50%;
+    background-image: url("https://img.freepik.com/free-vector/group-people-illustration-set_52683-33806.jpg?w=360");
+    background-repeat: no-repeat;
+}
+
+.css-border {
+    border: 5px solid royalblue;
+    border-radius: 10px;
+}
+
+.css-margin {
+    background-color: blueviolet;
+    margin: 50px 100px;
+    color: white;
+}
+
+.css-padding {
+    background-color: purple;
+    padding: 20px 30px;
+    color: white;
+}
+
+.css-width-and-height {
+    width: 50%;
+    height: 100px;
+    background-color: blue ;
+    color: white;
+    margin: 40px 0;
+}
+
+.css-box-model {
+    background-color: burlywood;
+    width: 300px;
+    border: 15px solid black;
+    padding: 50px;
+    margin: 20px;
+}
+
+.css-outline {
+    outline: 5px dotted green;
+}
+
+.text-color {
+    color: red;
+}
+
+.text-alignment {
+    text-align: center;
+}
+
+.text-decoration {
+    text-decoration: line-through;
+    text-decoration-color: blue;
+    text-decoration-style: wavy;
+}
+
+.text-transformation {
+    text-transform: uppercase;
+}
+
+.text-spacing {
+    letter-spacing: 5px;
+    word-spacing: 15px;
+}
+
+.text-shadow {
+    color: blueviolet;
+    text-shadow: 2px 4px red;
+}
+
+.css-font {
+    font: italic bold 20px "Courier New", monospace;
+}
+
+.css-links {
+    color: blue;
+}
+
+.css-links:hover {
+    color: red;
+}
+
+.css-list {
+    list-style-type: square;
+}
+
+table {
+    width: 50%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    border: 2px solid black;
+}
+
+table th {
+    padding: 10px;
+    background-color: purple;
+    color: white;
+    text-align: center;
+    border: 2px solid black;
+}
+
+table td {
+    padding: 5px;
+    border: 2px solid black;
+}
+
+.css-display-block {
+    background-color: #04AA6D;
+    color: white;
+    margin: 10px 0;
+    padding: 10px 0;
+    display: block;
+}
+
+.css-display-inline {
+    background-color: #025a3a;
+    color: white;
+    margin: 10px 0;
+    padding: 10px 0;
+    display: inline;
+}
+
+.css-display-inline-block {
+    background-color: #025a3a;
+    color: white;
+    margin: 10px 0;
+    padding: 10px 0;
+    display: inline;
+}
+
+.css-display-none {
+    background-color: #025a3a;
+    color: white;
+    margin: 10px 0;
+    padding: 10px 0;
+    display: none;
+}
+
+.css-max-width {
+    margin: 20px 0;
+    border: 2px solid green;
+    max-width: 200px;
+}
+
+.position-static {
+    width: 100px;
+    height: 100px;
+    margin: 10px 0;
+    background-color: #02255a;
+    color: white;
+    position: static;
+}
+
+.position-relative {
+    width: 100px;
+    height: 100px;
+    margin: 10px 0;
+    background-color: #02255a;
+    color: white;
+    left: 200px;
+    position: relative;
+}
+
+.position-fixed {
+    width: 100px;
+    height: 100px;
+    margin: 10px 0;
+    background-color: #02255a;
+    color: white;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+}
+
+.position-absolute {
+    width: 50px;
+    height: 50px;
+    margin: 10px 0;
+    background-color: #0758d3;
+    color: white;
+    left: 0;
+    position: absolute;
+}
+
+.position-sticky {
+    width: 100px;
+    height: 100px;
+    margin: 10px 0;
+    background-color: #0758d3;
+    color: white;
+    top: 0;
+    position: sticky;
+}
+
+.container {
+    position: relative;
+}
+.css-z-index-top {
+    width: 30%;
+    height: 30px;
+    margin: 10px 0;
+    background-color: #02255a;
+    color: white;
+    left: 200px;
+    position: absolute;
+    z-index: 3;
+    text-align: right;
+}
+
+.css-z-index-middle {
+    width: 50%;
+    height: 50px;
+    margin: 10px 0;
+    background-color: #025a35;
+    color: white;
+    left: 200px;
+    position: absolute;
+    z-index: 2;
+    text-align: right;
+}
+
+.css-z-index-bottom {
+    width: 80%;
+    height: 80px;
+    margin: 10px 0;
+    background-color: #bb6a00;
+    color: white;
+    left: 200px;
+    position: absolute;
+    z-index: 1;
+    text-align: right;
+}
+
+.css-overflow {
+    background-color: coral;
+    width: 200px;
+    height: 65px;
+    margin: 20px 0 50px 0;
+    border: 1px solid black;
+    overflow: auto;
+}
+
+
+.css-float-text1 {
+    padding: 20px;
+    color: white;
+    background-color: #02255a;
+    float: left;
+}
+
+.css-float-text2 {
+    display: inline-block;
+    padding: 20px;
+    color: white;
+    background-color: red;
+}
+
+.css-align-elements {
+    padding: 70px 0;
+    background-color: aqua;
+    margin: 0 auto;
+    text-align: center;
+}
