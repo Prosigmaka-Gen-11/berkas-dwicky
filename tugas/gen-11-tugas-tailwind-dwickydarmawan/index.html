@@ -56,28 +56,28 @@
           >
             <li>
               <a
-                href="#"
+                href="#default-carousel"
+                class="block p-4 py-2 text-black rounded hover:text-white hover:bg-[#ff7400] md:border-0"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
                 class="block p-4 py-2 text-black rounded hover:text-white hover:bg-[#ff7400] md:border-0"
                 >About</a
               >
             </li>
             <li>
               <a
-                href="#"
+                href="#blog"
                 class="block p-4 py-2 text-black rounded hover:text-white hover:bg-[#ff7400] md:border-0"
-                >Services</a
+                >Blog</a
               >
             </li>
             <li>
               <a
-                href="#"
-                class="block p-4 py-2 text-black rounded hover:text-white hover:bg-[#ff7400] md:border-0"
-                >Pricing</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
+                href="#contact"
                 class="block p-4 py-2 text-black rounded hover:text-white hover:bg-[#ff7400] md:border-0"
                 >Contact</a
               >
@@ -215,13 +215,13 @@
     <main class="container w-full mx-auto py-10 grid grid-cols-3 gap-10">
       <section class="col-span-3 md:col-span-2">
         <!--  Artikel Utama -->
-        <article class="mb-5">
+        <article id="blog" class="mb-5">
           <img
             class="img-fluid w-full"
-            src="https://placeimg.com/1000/400/tech"
+            src="https://placeimg.com/1000/400/animals"
             alt="article-image"
           />
-          <div class="py-3 flex justify-between items-baseline">
+          <div class="py-3 px-3 flex justify-between items-baseline">
             <section>
               <p class="font-light"><em> Tuesday, 12 October 2022</em></p>
             </section>
@@ -234,8 +234,8 @@
               <p>55</p>
             </section>
           </div>
-          <h1 class="font-bold pt-8 pb-4 text-3xl">Article Title</h1>
-          <p class="pb-6">
+          <h1 class="font-bold pt-8 pb-4 text-3xl px-3">Article Title</h1>
+          <p class="pb-6 px-3">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe
             excepturi enim explicabo rem suscipit minus provident quisquam
             quaerat velit dicta! Illo rem expedita magnam, voluptates
@@ -245,7 +245,7 @@
             beatae, odio quibusdam esse. Vel accusantium laborum saepe quasi.
           </p>
           <button
-            class="p-3 shadow-md rounded-lg border text-[#ff7400] hover:bg-[#ff7400] hover:text-white"
+            class="p-3 mx-3 shadow-md rounded-lg border text-[#ff7400] hover:bg-[#ff7400] hover:text-white"
           >
             Read More
           </button>
@@ -256,10 +256,10 @@
         <article class="mb-5 py-5">
           <img
             class="img-fluid w-full"
-            src="https://placeimg.com/1000/400/tech"
+            src="https://placeimg.com/1000/400/nature"
             alt="article-image"
           />
-          <div class="py-3 flex justify-between items-baseline">
+          <div class="py-3 px-3 flex justify-between items-baseline">
             <section>
               <p class="font-light"><em> Tuesday, 12 October 2022</em></p>
             </section>
@@ -272,8 +272,8 @@
               <p>55</p>
             </section>
           </div>
-          <h1 class="font-bold pt-8 pb-4 text-3xl">Article Title</h1>
-          <p class="pb-6">
+          <h1 class="font-bold pt-8 pb-4 text-3xl px-3">Article Title</h1>
+          <p class="pb-6 px-3">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe
             excepturi enim explicabo rem suscipit minus provident quisquam
             quaerat velit dicta! Illo rem expedita magnam, voluptates
@@ -283,14 +283,97 @@
             beatae, odio quibusdam esse. Vel accusantium laborum saepe quasi.
           </p>
           <button
-            class="p-3 shadow-md rounded-lg border text-[#ff7400] hover:bg-[#ff7400] hover:text-white"
+            class="p-3 mx-3 shadow-md rounded-lg border text-[#ff7400] hover:bg-[#ff7400] hover:text-white"
           >
             Read More
           </button>
         </article>
         <!-- Penutup Artikel Lainnya -->
+
+        <!-- Sub Artikel -->
+        <section class="grid grid-cols-2 gap-10">
+          <!--  Artikel Lainnya -->
+          <article class="mb-5 py-5 col-span-2 lg:col-span-1">
+            <img
+              class="img-fluid w-full"
+              src="https://placeimg.com/1000/400/tech"
+              alt="article-image"
+            />
+            <div class="py-3 px-3 flex justify-between items-baseline">
+              <section>
+                <p class="font-light"><em> Tuesday, 12 October 2022</em></p>
+              </section>
+              <section class="flex justify-end items-baseline">
+                <i class="mx-2 fa-solid fa-share-nodes"></i>
+                <p>100</p>
+                <i class="mx-2 fa-solid fa-heart"></i>
+                <p>2500</p>
+                <i class="mx-2 fa-solid fa-comment"></i>
+                <p>55</p>
+              </section>
+            </div>
+            <h1 class="font-bold pt-8 pb-4 text-3xl px-3">Article Title</h1>
+            <p class="pb-6 px-3">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe
+              excepturi enim explicabo rem suscipit minus provident quisquam
+              quaerat velit dicta! Illo rem expedita magnam, voluptates
+              necessitatibus sint! Reiciendis, quos mollitia. Lorem ipsum dolor,
+              sit amet consectetur adipisicing elit. Quae molestiae id
+              excepturi, ducimus eligendi eum debitis non laborum maiores illum
+              doloremque beatae, odio quibusdam esse. Vel accusantium laborum
+              saepe quasi.
+            </p>
+            <button
+              class="p-3 mx-3 shadow-md rounded-lg border text-[#ff7400] hover:bg-[#ff7400] hover:text-white"
+            >
+              Read More
+            </button>
+          </article>
+          <!-- Penutup Artikel Lainnya -->
+
+          <!--  Artikel Lainnya -->
+          <article class="mb-5 py-5 col-span-2 lg:col-span-1">
+            <img
+              class="img-fluid w-full"
+              src="https://placeimg.com/1000/400/arch"
+              alt="article-image"
+            />
+            <div class="py-3 px-3 flex justify-between items-baseline">
+              <section>
+                <p class="font-light"><em> Tuesday, 12 October 2022</em></p>
+              </section>
+              <section class="flex justify-end items-baseline">
+                <i class="mx-2 fa-solid fa-share-nodes"></i>
+                <p>100</p>
+                <i class="mx-2 fa-solid fa-heart"></i>
+                <p>2500</p>
+                <i class="mx-2 fa-solid fa-comment"></i>
+                <p>55</p>
+              </section>
+            </div>
+            <h1 class="font-bold pt-8 pb-4 text-3xl px-3">Article Title</h1>
+            <p class="pb-6 px-3">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe
+              excepturi enim explicabo rem suscipit minus provident quisquam
+              quaerat velit dicta! Illo rem expedita magnam, voluptates
+              necessitatibus sint! Reiciendis, quos mollitia. Lorem ipsum dolor,
+              sit amet consectetur adipisicing elit. Quae molestiae id
+              excepturi, ducimus eligendi eum debitis non laborum maiores illum
+              doloremque beatae, odio quibusdam esse. Vel accusantium laborum
+              saepe quasi.
+            </p>
+            <button
+              class="p-3 mx-3 shadow-md rounded-lg border text-[#ff7400] hover:bg-[#ff7400] hover:text-white"
+            >
+              Read More
+            </button>
+          </article>
+          <!-- Penutup Artikel Lainnya -->
+        </section>
+        <!-- Penutup Sub Artikel -->
       </section>
-      <section class="col-span-3 md:col-span-1">
+
+      <section id="about" class="col-span-3 md:col-span-1">
         <div class="container shadow-lg py-3">
           <img
             class="rounded-full py-3 w-1/6 md:w-1/2 block mx-auto"
@@ -322,23 +405,23 @@
 
     <!-- Footer -->
 
-    <footer class="border-top">
+    <footer id="contact" class="border-top">
       <div class="py-4 flex justify-around bg-[#ff7400] w-full">
-        <span>@ Dwicky Darmawan</span>
+        <span class="text-white">@ Dwicky Darmawan</span>
         <section>
           <a href="https://www.facebook.com"
-            ><span class="fa-brands fa-facebook scale-150 mx-3 link-light"
+            ><span class="fa-brands fa-facebook scale-150 mx-3 fill-white"
               >FB</span
             ></a
           >
           <a href="https://www.github.com/dwickydarmawan22"
-            ><span class="fa-brands fa-github scale-150 mx-3 link-light"
+            ><span class="fa-brands fa-github scale-150 mx-3 fill-white"
               >Github</span
             ></a
           >
           <a href="https://www.instagram.com"
-            ><span class="fa-brands fa-instagram scale-150 mx-3 link-light"
-              >Instagram</span
+            ><i class="fa-brands fa-instagram scale-150 mx-3 fill-white"
+              >Instagram</i
             ></a
           >
         </section>
