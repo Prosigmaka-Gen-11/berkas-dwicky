@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Portfolio Tailwind - Dwicky Darmawan</title>
+  </head>
+
+  <body class="font-roboto">
+    <!-- Ini Navbar -->
+    <nav
+      class="bg-black px-2 sm:px-4 py-2.5 rounded shadow-lg sticky top-0 z-50"
+    >
+      <div class="container flex flex-wrap justify-center items-center mx-auto">
+        <button
+          data-collapse-toggle="navbar-default"
+          type="button"
+          class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-default"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-6 h-6"
+            aria-hidden="true"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul
+            class="flex flex-col p-4 mt-4 rounded-lg border md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0"
+          >
+            <li>
+              <a
+                href="#home"
+                class="font-roboto font-semibold block p-4 py-2 text-white rounded hover:text-black hover:bg-abumuda md:border-0"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#portfolio"
+                class="font-roboto font-semibold block p-4 py-2 text-white rounded hover:text-black hover:bg-abumuda md:border-0"
+                >Portfolio</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="font-roboto font-semibold block p-4 py-2 text-white rounded hover:text-black hover:bg-abumuda md:border-0"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#blog"
+                class="font-roboto font-semibold block p-4 py-2 text-white rounded hover:text-black hover:bg-abumuda md:border-0"
+                >Blog</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="font-roboto font-semibold block p-4 py-2 text-white rounded hover:text-black hover:bg-abumuda md:border-0"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Ini Penutup Navbar -->
+
+    <!-- Ini Header -->
+    <header id="home" class="relative">
+      <div class="carousel w-full">
+        <div id="item1" class="carousel-item w-full">
+          <img
+            src="https://placeimg.com/1000/500/arch"
+            class="w-full blur-md"
+          />
+        </div>
+        <div id="item2" class="carousel-item w-full">
+          <img src="https://placeimg.com/1000/500/arch" class="w-full" />
+        </div>
+        <div id="item3" class="carousel-item w-full">
+          <img src="https://placeimg.com/1000/500/arch" class="w-full" />
+        </div>
+        <div id="item4" class="carousel-item w-full">
+          <img src="https://placeimg.com/1000/500/arch" class="w-full" />
+        </div>
+      </div>
+      <div class="absolute bottom-0 left-28 flex flex-col py-3 gap-2">
+        <a
+          href="#item1"
+          class="btn btn-xs btn-circle btn-outline my-1 text-white hover:bg-abumuda"
+        ></a>
+        <a
+          href="#item2"
+          class="btn btn-xs btn-circle btn-outline my-1 text-white hover:bg-abumuda"
+        ></a>
+        <a
+          href="#item3"
+          class="btn btn-xs btn-circle btn-outline my-1 text-white hover:bg-abumuda"
+        ></a>
+        <a
+          href="#item4"
+          class="btn btn-xs btn-circle btn-outline my-1 text-white hover:bg-abumuda"
+        ></a>
+      </div>
+    </header>
+    <!-- Ini Penutup Header -->
+
+    <!-- Ini Konten Portfolio -->
+    <main class="bg-black">
+      <section class="container mx-auto">
+        <h1
+          id="portfolio"
+          class="text-center font-roboto font-bold text-7xl text-abumuda pt-32 pb-20"
+        >
+          Portfolio
+        </h1>
+
+        <!-- Tabs -->
+        <div class="text-sm font-medium text-center text-abumuda">
+          <ul class="flex flex-wrap -mb-px justify-center">
+            <li class="mr-4">
+              <a
+                href="#"
+                class="inline-block text-lg p-4 rounded-t-lg border-b-2 border-transparent hover:text-white hover:border-white active:text-abutua active:border-abutua"
+                >Profile</a
+              >
+            </li>
+            <li class="mr-4">
+              <a
+                href="#"
+                class="inline-block text-lg p-4 rounded-t-lg border-b-2 border-transparent hover:text-white hover:border-white active:text-abutua active:border-abutua"
+                >Architecture</a
+              >
+            </li>
+            <li class="mr-4">
+              <a
+                href="#"
+                class="inline-block text-lg p-4 rounded-t-lg border-b-2 border-transparent hover:text-white hover:border-white active:text-abutua active:border-abutua"
+                >Nature</a
+              >
+            </li>
+            <li class="mr-4">
+              <a
+                href="#"
+                class="inline-block text-lg p-4 rounded-t-lg border-b-2 border-transparent hover:text-white hover:border-white active:text-abutua active:border-abutua"
+                >Technology</a
+              >
+            </li>
+            <li class="mr-4">
+              <a
+                href="#"
+                class="inline-block text-lg p-4 rounded-t-lg border-b-2 border-transparent hover:text-white hover:border-white active:text-abutua active:border-abutua"
+                >Portrait</a
+              >
+            </li>
+            <li class="mr-4">
+              <a
+                href="#"
+                class="inline-block text-lg p-4 rounded-t-lg border-b-2 border-transparent hover:text-white hover:border-white active:text-abutua active:border-abutua"
+                >Food</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- Ini Penutup Tabs -->
+
+        <!-- Ini isi Konten -->
+        <div class="grid grid-rows-5 grid-cols-4 gap-4 mt-10 mb-20">
+          <img
+            src="https://placeimg.com/500/500/arch"
+            alt=""
+            class="row-start-1 row-end-3 col-span-2 w-full"
+          />
+          <img
+            src="https://placeimg.com/500/500/arch"
+            alt=""
+            class="row-start-1 row-end-3 row-span-2 col-span-1 aspect-[1/2.05] w-full"
+          />
+          <img
+            src="https://placeimg.com/500/500/arch"
+            alt=""
+            class="aspect-square row-start-1 row-end-2 row-span-2 col-span-1 w-full"
+          />
+          <img
+            src="https://placeimg.com/500/500/arch"
+            alt=""
+            class="aspect-[1/2.05] row-start-2 row-end-4 row-span-2 col-span-1 w-full"
+          />
+          <img
+            src="https://placeimg.com/500/500/arch"
+            alt=""
+            class="aspect-square row-start-3 row-end-5 row-span-2 col-span-1 w-full col-end-2"
+          />
+          <img
+            src="https://placeimg.com/500/500/arch"
+            alt=""
+            class="w-full aspect-[2.05/1] row-start-3 row-end-5 row-span-2 col-span-2 col-end-4"
+          />
+          <img
+            src="https://placeimg.com/500/500/arch"
+            alt=""
+            class="row-start-4 row-end-6 row-span-2 col-span-1 aspect-[1/2.05] w-full col-end-2"
+          />
+          <img
+            src="https://placeimg.com/500/500/arch"
+            alt=""
+            class="aspect-square row-start-4 row-span-2 col-span-1 w-full col-start-2"
+          />
+          <img
+            src="https://placeimg.com/500/500/arch"
+            alt=""
+            class="aspect-square row-start-5 row-span-2 col-span-1 w-full col-start-2"
+          />
+          <img
+            src="https://placeimg.com/500/500/arch"
+            alt=""
+            class="aspect-square row-start-4 row-span-2 col-span-2 w-full col-start-3"
+          />
+        </div>
+        <!-- Ini Penutup Konten -->
+      </section>
+      <!-- Ini About -->
+      <section
+        id="about"
+        class="w-full h-screen bg-center bg-cover bg-about mt-64"
+      >
+        <div class="container mx-auto">
+          <h1 class="font-roboto font-bold text-7xl text-abumuda pt-64 pb-10">
+            About Me
+          </h1>
+          <p class="max-w-lg pb-5">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum,
+            ex asperiores quam enim libero voluptates sunt fuga sit culpa
+            corporis in, itaque placeat a deserunt tempora perferendis
+            reiciendis iusto provident.
+          </p>
+          <p class="max-w-lg pb-5">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum,
+            ex asperiores quam enim libero voluptates sunt fuga sit culpa
+            corporis in, itaque placeat a deserunt tempora perferendis
+            reiciendis iusto provident.
+          </p>
+          <section class="my-5">
+            <a href="https://www.facebook.com"
+              ><span
+                class="fa-brands fa-facebook scale-150 lg:scale-[2.1] ml-3 mr-10 text-abumuda"
+                >FB</span
+              ></a
+            >
+            <a href="https://www.github.com/dwickydarmawan22"
+              ><span
+                class="fa-brands fa-github scale-150 lg:scale-[2.1] mr-10 text-abumuda"
+                >Github</span
+              ></a
+            >
+            <a href="https://www.instagram.com"
+              ><i
+                class="fa-brands fa-instagram scale-150 lg:scale-[2.1] mr-10 text-abumuda"
+                >Instagram</i
+              ></a
+            >
+          </section>
+        </div>
+      </section>
+      <!-- Ini Penutup About -->
+
+      <!-- Ini Prices -->
+      <section class="container mx-auto lg:px-32">
+        <h1
+          class="text-center font-roboto font-bold text-7xl text-abumuda pt-32 pb-20"
+        >
+          Prices
+        </h1>
+        <div class="grid grid-cols-2 gap-6">
+          <section
+            class="w-full hover:border-white hover:border-4 border-4 border-black text-abumuda text-center p-7"
+          >
+            <h1 class="font-bold text-3xl">Minimum</h1>
+            <h1 class="font-bold text-3xl mb-5">100$</h1>
+            <section class="mx-7 mb-5">
+              <div class="flex justify-between">
+                <p>Duration</p>
+                <p>3 Hours</p>
+              </div>
+              <div class="flex justify-between">
+                <p>Number of Photos</p>
+                <p>100 pcs</p>
+              </div>
+              <div class="flex justify-between">
+                <p>Processing Time</p>
+                <p>2 Weeks</p>
+              </div>
+              <div class="flex justify-between">
+                <p>Retouching</p>
+                <p>3 Hours</p>
+              </div>
+            </section>
+            <button
+              type="button"
+              class="text-abumuda hover:text-black border border-abumuda hover:bg-abumuda font-medium text-sm px-10 py-2.5 text-center mr-2 mb-2"
+            >
+              Buy Now
+            </button>
+          </section>
+          <section
+            class="w-full hover:border-white hover:border-4 border-4 border-black text-abumuda text-center p-7"
+          >
+            <h1 class="font-bold text-3xl">Minimum</h1>
+            <h1 class="font-bold text-3xl mb-5">100$</h1>
+            <section class="mx-7 mb-5">
+              <div class="flex justify-between">
+                <p>Duration</p>
+                <p>3 Hours</p>
+              </div>
+              <div class="flex justify-between">
+                <p>Number of Photos</p>
+                <p>100 pcs</p>
+              </div>
+              <div class="flex justify-between">
+                <p>Processing Time</p>
+                <p>2 Weeks</p>
+              </div>
+              <div class="flex justify-between">
+                <p>Retouching</p>
+                <p>3 Hours</p>
+              </div>
+            </section>
+            <button
+              type="button"
+              class="text-abumuda hover:text-black border border-abumuda hover:bg-abumuda font-medium text-sm px-10 py-2.5 text-center mr-2 mb-2"
+            >
+              Buy Now
+            </button>
+          </section>
+          <section
+            class="w-full hover:border-white hover:border-4 border-4 border-black text-abumuda text-center p-7"
+          >
+            <h1 class="font-bold text-3xl">Minimum</h1>
+            <h1 class="font-bold text-3xl mb-5">100$</h1>
+            <section class="mx-7 mb-5">
+              <div class="flex justify-between">
+                <p>Duration</p>
+                <p>3 Hours</p>
+              </div>
+              <div class="flex justify-between">
+                <p>Number of Photos</p>
+                <p>100 pcs</p>
+              </div>
+              <div class="flex justify-between">
+                <p>Processing Time</p>
+                <p>2 Weeks</p>
+              </div>
+              <div class="flex justify-between">
+                <p>Retouching</p>
+                <p>3 Hours</p>
+              </div>
+            </section>
+            <button
+              type="button"
+              class="text-abumuda hover:text-black border border-abumuda hover:bg-abumuda font-medium text-sm px-10 py-2.5 text-center mr-2 mb-2"
+            >
+              Buy Now
+            </button>
+          </section>
+          <section
+            class="w-full hover:border-white hover:border-4 border-4 border-black text-abumuda text-center p-7"
+          >
+            <h1 class="font-bold text-3xl">Minimum</h1>
+            <h1 class="font-bold text-3xl mb-5">100$</h1>
+            <section class="mx-7 mb-5">
+              <div class="flex justify-between">
+                <p>Duration</p>
+                <p>3 Hours</p>
+              </div>
+              <div class="flex justify-between">
+                <p>Number of Photos</p>
+                <p>100 pcs</p>
+              </div>
+              <div class="flex justify-between">
+                <p>Processing Time</p>
+                <p>2 Weeks</p>
+              </div>
+              <div class="flex justify-between">
+                <p>Retouching</p>
+                <p>3 Hours</p>
+              </div>
+            </section>
+            <button
+              type="button"
+              class="text-abumuda hover:text-black border border-abumuda hover:bg-abumuda font-medium text-sm px-10 py-2.5 text-center mr-2 mb-2"
+            >
+              Buy Now
+            </button>
+          </section>
+        </div>
+      </section>
+      <!-- Ini Penutup Prices -->
+
+      <!-- Testimoni -->
+      <section class="relative container mx-auto mt-64">
+        <h1
+          class="text-center font-roboto font-bold text-7xl text-abumuda pb-16 absolute top-0 left-10"
+        >
+          Testimonial
+        </h1>
+        <!-- Isi Testimonial -->
+        <div class="carousel w-full container">
+          <div id="testimoni1" class="carousel-item w-full justify-center">
+            <figure class="mx-auto max-w-screen-md text-center mt-60">
+              <svg
+                aria-hidden="true"
+                class="mx-auto mb-3 w-12 h-12 text-abumuda"
+                viewBox="0 0 24 27"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+              <blockquote>
+                <p class="text-2xl italic font-medium text-abumuda">
+                  "Flowbite is just awesome. It contains tons of predesigned
+                  components and pages starting from login screen to complex
+                  dashboard. Perfect choice for your next SaaS application."
+                </p>
+              </blockquote>
+              <figcaption
+                class="flex justify-center items-center mt-6 space-x-3"
+              >
+                <img
+                  class="w-6 h-6 rounded-full"
+                  src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png"
+                  alt="profile picture"
+                />
+                <div class="flex items-center divide-x-2 divide-white">
+                  <cite class="pr-3 font-medium text-abumuda"
+                    >Micheal Gough</cite
+                  >
+                  <cite class="pl-3 text-sm font-light text-abumuda"
+                    >CEO at Google</cite
+                  >
+                </div>
+              </figcaption>
+            </figure>
+
+            <img
+              src="https://placeimg.com/1000/500/arch"
+              class="w-1/3 aspect-[1/1.5]"
+            />
+          </div>
+          <div id="testimoni2" class="carousel-item w-full justify-center">
+            <figure class="mx-auto max-w-screen-md text-center mt-60">
+              <svg
+                aria-hidden="true"
+                class="mx-auto mb-3 w-12 h-12 text-abumuda"
+                viewBox="0 0 24 27"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+              <blockquote>
+                <p class="text-2xl italic font-medium text-abumuda">
+                  "Flowbite is just awesome. It contains tons of predesigned
+                  components and pages starting from login screen to complex
+                  dashboard. Perfect choice for your next SaaS application."
+                </p>
+              </blockquote>
+              <figcaption
+                class="flex justify-center items-center mt-6 space-x-3"
+              >
+                <img
+                  class="w-6 h-6 rounded-full"
+                  src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png"
+                  alt="profile picture"
+                />
+                <div class="flex items-center divide-x-2 divide-white">
+                  <cite class="pr-3 font-medium text-abumuda"
+                    >Micheal Gough</cite
+                  >
+                  <cite class="pl-3 text-sm font-light text-abumuda"
+                    >CEO at Google</cite
+                  >
+                </div>
+              </figcaption>
+            </figure>
+            <img
+              src="https://placeimg.com/1000/500/arch"
+              class="w-1/3 aspect-[1/1.5]"
+            />
+          </div>
+          <div id="testimoni3" class="carousel-item w-full justify-center">
+            <figure class="mx-auto max-w-screen-md text-center mt-60">
+              <svg
+                aria-hidden="true"
+                class="mx-auto mb-3 w-12 h-12 text-abumuda"
+                viewBox="0 0 24 27"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+              <blockquote>
+                <p class="text-2xl italic font-medium text-abumuda">
+                  "Flowbite is just awesome. It contains tons of predesigned
+                  components and pages starting from login screen to complex
+                  dashboard. Perfect choice for your next SaaS application."
+                </p>
+              </blockquote>
+              <figcaption
+                class="flex justify-center items-center mt-6 space-x-3"
+              >
+                <img
+                  class="w-6 h-6 rounded-full"
+                  src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png"
+                  alt="profile picture"
+                />
+                <div class="flex items-center divide-x-2 divide-white">
+                  <cite class="pr-3 font-medium text-abumuda"
+                    >Micheal Gough</cite
+                  >
+                  <cite class="pl-3 text-sm font-light text-abumuda"
+                    >CEO at Google</cite
+                  >
+                </div>
+              </figcaption>
+            </figure>
+            <img
+              src="https://placeimg.com/1000/500/arch"
+              class="w-1/3 aspect-[1/1.5]"
+            />
+          </div>
+          <div id="testimoni4" class="carousel-item w-full justify-center">
+            <figure class="mx-auto max-w-screen-md text-center mt-60">
+              <svg
+                aria-hidden="true"
+                class="mx-auto mb-3 w-12 h-12 text-abumuda"
+                viewBox="0 0 24 27"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+              <blockquote>
+                <p class="text-2xl italic font-medium text-abumuda">
+                  "Flowbite is just awesome. It contains tons of predesigned
+                  components and pages starting from login screen to complex
+                  dashboard. Perfect choice for your next SaaS application."
+                </p>
+              </blockquote>
+              <figcaption
+                class="flex justify-center items-center mt-6 space-x-3"
+              >
+                <img
+                  class="w-6 h-6 rounded-full"
+                  src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png"
+                  alt="profile picture"
+                />
+                <div class="flex items-center divide-x-2 divide-white">
+                  <cite class="pr-3 font-medium text-abumuda"
+                    >Micheal Gough</cite
+                  >
+                  <cite class="pl-3 text-sm font-light text-abumuda"
+                    >CEO at Google</cite
+                  >
+                </div>
+              </figcaption>
+            </figure>
+            <img
+              src="https://placeimg.com/1000/500/arch"
+              class="w-1/3 aspect-[1/1.5]"
+            />
+          </div>
+        </div>
+        <!-- Penutup Isi Testimonial -->
+      </section>
+
+      <!-- Click Control Carousel -->
+      <div class="flex justify-center w-full py-3 gap-2">
+        <a
+          href="#testimoni1"
+          class="btn btn-xs btn-circle btn-outline my-1 text-white hover:bg-abumuda"
+        ></a>
+        <a
+          href="#testimoni2"
+          class="btn btn-xs btn-circle btn-outline my-1 text-white hover:bg-abumuda"
+        ></a>
+        <a
+          href="#testimoni3"
+          class="btn btn-xs btn-circle btn-outline my-1 text-white hover:bg-abumuda"
+        ></a>
+        <a
+          href="#testimoni4"
+          class="btn btn-xs btn-circle btn-outline my-1 text-white hover:bg-abumuda"
+        ></a>
+      </div>
+      <!-- Penutup Click Control Carousel -->
+      <!-- Penutup Testimoni -->
+
+      <!-- Ini Blog -->
+      <section id="blog" class="container mx-auto lg:px-32">
+        <h1
+          class="text-center font-roboto font-bold text-7xl text-abumuda pt-32 pb-20"
+        >
+          Blog
+        </h1>
+        <div class="grid grid-cols-3 gap-6">
+          <section
+            class="w-full hover:border-white hover:border-4 border-4 border-black text-abumuda text-center p-7"
+          >
+            <img
+              src="https://placeimg.com/1000/500/arch"
+              alt=""
+              class="w-full"
+            />
+            <div class="py-3 px-3 flex justify-between items-baseline">
+              <section>
+                <p class="font-light text-xs">
+                  <em> Tuesday, 12 October 2022</em>
+                </p>
+              </section>
+              <section class="flex justify-end items-baseline text-xs">
+                <i class="mx-2 fa-solid fa-share-nodes"></i>
+                <p>100</p>
+                <i class="mx-2 fa-solid fa-heart"></i>
+                <p>2500</p>
+                <i class="mx-2 fa-solid fa-comment"></i>
+                <p>55</p>
+              </section>
+            </div>
+            <h1 class="font-bold text-2xl my-5">
+              Architecture is not about building
+            </h1>
+            <p class="text-abutua text-left text-lg my-3 pb-5">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+              laudantium, voluptatum iure sed quod, similique at voluptatem odio
+              et, nam unde explicabo? Fugit laborum eligendi soluta, accusamus
+              laudantium amet blanditiis.
+            </p>
+            <button
+              type="button"
+              class="text-abumuda hover:text-black border border-abumuda hover:bg-abumuda font-medium text-sm px-10 py-2.5 text-center mr-2 mb-2"
+            >
+              Read More
+            </button>
+          </section>
+          <section
+            class="w-full hover:border-white hover:border-4 border-4 border-black text-abumuda text-center p-7"
+          >
+            <img
+              src="https://placeimg.com/1000/500/nature"
+              alt=""
+              class="w-full"
+            />
+            <div class="py-3 px-3 flex justify-between items-baseline">
+              <section>
+                <p class="font-light text-xs">
+                  <em> Tuesday, 12 October 2022</em>
+                </p>
+              </section>
+              <section class="flex justify-end items-baseline text-xs">
+                <i class="mx-2 fa-solid fa-share-nodes"></i>
+                <p>100</p>
+                <i class="mx-2 fa-solid fa-heart"></i>
+                <p>2500</p>
+                <i class="mx-2 fa-solid fa-comment"></i>
+                <p>55</p>
+              </section>
+            </div>
+            <h1 class="font-bold text-2xl my-5">Nature is beautiful</h1>
+            <p class="text-abutua text-left text-lg my-3 pb-5">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+              laudantium, voluptatum iure sed quod, similique at voluptatem odio
+              et, nam unde explicabo? Fugit laborum eligendi soluta, accusamus
+              laudantium amet blanditiis.
+            </p>
+            <button
+              type="button"
+              class="text-abumuda hover:text-black border border-abumuda hover:bg-abumuda font-medium text-sm px-10 py-2.5 text-center mr-2 mb-2"
+            >
+              Read More
+            </button>
+          </section>
+          <section
+            class="w-full hover:border-white hover:border-4 border-4 border-black text-abumuda text-center p-7"
+          >
+            <img
+              src="https://placeimg.com/1000/500/tech"
+              alt=""
+              class="w-full"
+            />
+            <div class="py-3 px-3 flex justify-between items-baseline">
+              <section>
+                <p class="font-light text-xs">
+                  <em> Tuesday, 12 October 2022</em>
+                </p>
+              </section>
+              <section class="flex justify-end items-baseline text-xs">
+                <i class="mx-2 fa-solid fa-share-nodes"></i>
+                <p>100</p>
+                <i class="mx-2 fa-solid fa-heart"></i>
+                <p>2500</p>
+                <i class="mx-2 fa-solid fa-comment"></i>
+                <p>55</p>
+              </section>
+            </div>
+            <h1 class="font-bold text-2xl my-5">
+              Technology will bring you to the future
+            </h1>
+            <p class="text-abutua text-left text-lg my-3 pb-5">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+              laudantium, voluptatum iure sed quod, similique at voluptatem odio
+              et, nam unde explicabo? Fugit laborum eligendi soluta, accusamus
+              laudantium amet blanditiis.
+            </p>
+            <button
+              type="button"
+              class="text-abumuda hover:text-black border border-abumuda hover:bg-abumuda font-medium text-sm px-10 py-2.5 text-center mr-2 mb-2"
+            >
+              Read More
+            </button>
+          </section>
+        </div>
+      </section>
+      <!-- Ini Penutup Blog -->
+
+      <!-- Contact Us-->
+      <footer
+        id="contact"
+        class="w-full bg-center bg-cover bg-building mt-64 aspect-[3/1]"
+      >
+        <div class="container mx-auto">
+          <h1 class="font-roboto font-bold text-7xl text-black pt-32 pb-14">
+            Have Any Questions ?
+          </h1>
+          <section class="grid grid-cols-3 gap-10">
+            <form class="col-span-2">
+              <div class="grid grid-cols-2 gap-5">
+                <div class="mb-6">
+                  <input
+                    type="name"
+                    id="name"
+                    class="bg-white border border-white text-black text-base focus:ring-black focus:border-abutua block w-full p-2.5 opacity-80"
+                    placeholder="Full Name"
+                  />
+                </div>
+                <div class="mb-6">
+                  <input
+                    type="email"
+                    id="email"
+                    class="bg-white border border-white text-black text-base focus:ring-black focus:border-abutua block w-full p-2.5 opacity-80"
+                    placeholder="Email Address"
+                  />
+                </div>
+              </div>
+              <textarea
+                id="message"
+                rows="4"
+                class="block p-2.5 mb-6 w-full text-sm text-black bg-white border border-white focus:ring-black focus:border-black opacity-80"
+                placeholder="Leave a message..."
+              ></textarea>
+              <div class="flex justify-end">
+                <button
+                  type="submit"
+                  class="text-black hover:text-abumuda border-2 border-black hover:bg-black font-semibold text-sm px-10 py-2.5 text-center mb-2"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+            <div class="text-black">
+              <h1 class="font-semibold text-lg">Get In Touch</h1>
+              <p class="max-w-lg">dwickydarmawan22@gmail.com</p>
+              <p class="max-w-lg pb-5">+62 896 5846 8789</p>
+              <h1 class="font-semibold text-lg">Office</h1>
+              <p class="max-w-md">
+                Komp. Griya Jagabaya, Kec. CImaung, Kab. Bandung
+              </p>
+              <p class="max-w-md">40374</p>
+            </div>
+          </section>
+        </div>
+      </footer>
+      <!-- Penutup Contact Us-->
+    </main>
+
+    <!-- Ini Penutup Konten Portfolio -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"></script>
+    <script src="./node_modules/flowbite/dist/flowbite.js"></script>
+  </body>
+</html>

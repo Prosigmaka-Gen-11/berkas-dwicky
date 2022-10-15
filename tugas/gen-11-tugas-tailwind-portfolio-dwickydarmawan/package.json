@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "start": "npx tailwindcss -i ./input.css -o ./output.css --watch",
+    "production": "npx tailwindcss -i ./input.css -o ./output.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.1.8"
+  },
+  "dependencies": {
+    "daisyui": "^2.31.0",
+    "flowbite": "^1.5.3"
+  }
+}
