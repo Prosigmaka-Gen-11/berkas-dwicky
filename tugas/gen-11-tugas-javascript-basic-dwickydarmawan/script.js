@@ -9,8 +9,11 @@ const biodata = {
     kota: "Bandung",
     kodePos: 40374,
   },
-  fungsiBaru: function () {},
+  fungsiBaru: function () {
+    return this.namaLengkap + ", tinggal di " + this.alamat.kota;
+  },
   perkalian: perkalian(3, 2),
 };
 
 console.log(biodata.perkalian);
+console.log(biodata.fungsiBaru());
