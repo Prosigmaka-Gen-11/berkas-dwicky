@@ -7,7 +7,7 @@ export default function UbahNama(props) {
   const [spiritWord, setSpiritWord] = React.useState("");
   return (
     <>
-      <h1 className="text-3xl text-center pt-10 font-bold">
+      <h1 className="text-3xl text-center pt-10 font-bold text-white">
         {greet}, Selamat Pagi {name} ! {spiritWord}
       </h1>
       <Button
