@@ -88,14 +88,12 @@ export default class Lifecycle extends Component {
         return (
             <>
                 <div>
-                    {/*{movies.map((movie) => (
+                    {movies.map((movie) => (
                         <ol key={movie.id} >
-                            Full_Name: {movie.name}, {movie.rating}, {movie.duration}
+                            Movie Name: {movie.name}, Release Date : {movie.releaseDate}, Genre : {movie.genre}, Rating : {movie.rating}, Duration : {movie.duration}
                         </ol>
                     ))}
-                     {movies.map((movie) => (
-                        <img src={movie.poster} alt="" />
-                    ))} */}
+
 
                     {movies &&
                         movies
