@@ -6,7 +6,7 @@ const initialForm = {
   releaseDate: '', //date
   genre: [], //checkboxes
   description: '', //textarea
-  theatre: '', //radio
+  theatre: 'Bandung', //radio
   payment: '', //select
 }
 
