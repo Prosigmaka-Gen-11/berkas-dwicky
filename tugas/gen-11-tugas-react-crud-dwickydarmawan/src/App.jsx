@@ -1,34 +1,31 @@
-import { useEffect, useState } from 'react'
-import axios from 'axios'
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const initialForm = {
-  title: '', //text
-  releaseDate: '', //date
+  title: "", //text
+  releaseDate: "", //date
   genre: [], //checkboxes
-  description: '', //textarea
-  theatre: 'Bandung', //radio
-  payment: '', //select
-}
+  description: "", //textarea
+  theatre: "Bandung", //radio
+  payment: "", //select
+};
 
-const genresCheckbox = ["Fantasy", "Romance", "Horror", "Sci-Fi", "Cartoon"]
-const theatreRadio = ["Bandung", "Jakarta", "Bekasi", "Malang"]
+const genresCheckbox = ["Fantasy", "Romance", "Horror", "Sci-Fi", "Cartoon"];
+const theatreRadio = ["Bandung", "Jakarta", "Bekasi", "Malang"];
 
 export default function App() {
-  const [movies, setMovies] = useState([])
-  const [inputData, setInputData] = useState({ ...initialForm })
-  const isEditing = inputData.id
-
+  const [movies, setMovies] = useState([]);
+  const [inputData, setInputData] = useState({ ...initialForm });
+  const isEditing = inputData.id;
 
   async function getMovies() {
-    const result = await axios.get('http://localhost:3000/movies')
-    setMovies(result.data)
-    console.log(movies)
+    const result = await axios.get("http://localhost:3000/movies");
+    setMovies(result.data);
+    console.log(movies);
   }
 
-
-
   function handleInputData(evt, propName) {
-    setInputData({ ...inputData, [propName]: evt.target.value })
+    setInputData({ ...inputData, [propName]: evt.target.value });
   }
 
   const handleCheckbox = (e) => {
@@ -38,217 +35,237 @@ export default function App() {
     console.log(`${value} is ${checked}`);
 
     if (checked) {
-      setInputData({ ...inputData, genre: [...genre, value], });
+      setInputData({ ...inputData, genre: [...genre, value] });
+    } else {
+      setInputData({ ...inputData, genre: genre.filter((e) => e !== value) });
     }
-
-    else {
-      setInputData({ ...inputData, genre: genre.filter((e) => e !== value), });
-    }
-  }
-
-
+  };
 
   async function handleSubmit(evt) {
-    evt.preventDefault()
+    evt.preventDefault();
 
     if (isEditing) {
-      await axios.put(`http://localhost:3000/movies/${inputData.id}`, inputData)
+      await axios.put(
+        `http://localhost:3000/movies/${inputData.id}`,
+        inputData
+      );
     } else {
-      await axios.post(`http://localhost:3000/movies`, inputData)
+      await axios.post(`http://localhost:3000/movies`, inputData);
     }
 
-    getMovies()
-    setInputData({ ...initialForm })
-
-
+    getMovies();
+    setInputData({ ...initialForm });
   }
 
   function handleEdit(movie) {
-    setInputData({ ...movie })
+    setInputData({ ...movie });
   }
 
   async function handleDelete(id) {
-    await axios.delete(`http://localhost:3000/movies/${id}`)
-    getMovies()
+    await axios.delete(`http://localhost:3000/movies/${id}`);
+    getMovies();
   }
 
-
   useEffect(() => {
-    getMovies()
-  }, [])
+    getMovies();
+  }, []);
 
   return (
     <>
+      <h1 className="text-center text-3xl font-bold my-10"> Form Movies</h1>
 
-      <section className="container flex justify-center">
-        <form onSubmit={evt => handleSubmit(evt)} >
-          {/* Akhir Text Input  */}
-          <label>
-            Title Movie <br />
-            <input type="text" value={inputData.title} onChange={evt => handleInputData(evt, 'title')} />
+      <form
+        className="container w-1/3 mx-auto"
+        onSubmit={(evt) => handleSubmit(evt)}
+      >
+        <div className="mb-6">
+          <label className="block  text-md font-medium text-gray-900 ">
+            Title Movie
+            <input
+              type="text"
+              value={inputData.title}
+              onChange={(evt) => handleInputData(evt, "title")}
+              className="mt-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            />
           </label>
-          <br /><br />
-          {/* Akhir Text Input  */}
-
-          {/* Akhir Date Input  */}
-          <label>
-            Release Date <br />
-            <input type="date" value={inputData.releaseDate} onChange={evt => handleInputData(evt, 'releaseDate')} />
+        </div>
+        <div className="mb-6">
+          <label className="block mb-2 text-md font-medium text-gray-900 ">
+            Release Date
+            <input
+              type="date"
+              value={inputData.releaseDate}
+              onChange={(evt) => handleInputData(evt, "releaseDate")}
+              className="mt-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            />
           </label>
-          <br /><br />
-          {/* Akhir Date Input  */}
-
-          {/* Description Input  */}
-          <label>
-            Description <br />
-            <textarea value={inputData.description} onChange={evt => handleInputData(evt, 'description')} ></textarea>
-          </label>
-          <br /><br />
-          {/* Akhir Description Input  */}
-
-
-          {/* Radio Input */}
+        </div>
+        <div className="mb-6">
           <div>
-            <label >Theatre :</label> <br />
-            {theatreRadio.map(theatres =>
-              <label className="mr-2" key={theatres}>
-                <input
-                  className="mr-2"
-                  type="radio"
-                  value={theatres}
-                  name="theatre"
-                  checked={inputData.theatre.indexOf(theatres) !== -1}
-                  onChange={evt => handleInputData(evt, 'theatre')}
-                />
+            <label className="block mb-2 text-md font-medium text-gray-900 dark:text-gray-400">
+              Description Movie
+            </label>
+            <textarea
+              value={inputData.description}
+              onChange={(evt) => handleInputData(evt, "description")}
+              className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Leave a description..."
+            />
+          </div>
+        </div>
+        <div className=" mb-4">
+          <label className="flex items-baseline text-md font-medium text-gray-900 ">
+            Choose Theatre
+          </label>
+          {theatreRadio.map((theatres) => (
+            <>
+              <input
+                type="radio"
+                name="theatre"
+                value={theatres}
+                checked={inputData.theatre.indexOf(theatres) !== -1}
+                onChange={(evt) => handleInputData(evt, "theatre")}
+                className="w-4 h-4  text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+              />
+              <label
+                className="ml-2  text-sm font-medium text-gray-900 "
+                key={theatres.id}
+              >
                 {theatres}
               </label>
-            )}
-
-          </div>
-          <br /><br />
-          {/* Akhir Radio Input */}
-
-
-          {/* Checkboxes Input  */}
-
-          <div className="row">
-            <div className="col-md-6">
-              <label >Genre :</label> <br />
-              {genresCheckbox.map(genres =>
-
-                <div className="form-check m-3" key={genres}>
-                  <input
-                    className="form-check-input"
-                    type="checkbox"
-                    name="genre"
-                    value={genres}
-                    checked={inputData.genre.indexOf(genres) !== -1}
-                    onChange={handleCheckbox}
-                  />
-                  <label
-                    className="pl-5"
-                    htmlFor="flexCheckDefault"
-                  >
-                    {genres}
-                  </label>
-                </div>
-              )}
-            </div>
-          </div>
-          {/* Akhir Checkboxes Input  */}
-
-          {/* Select Input */}
-          <label>
-            Payment <br />
-            <select value={inputData.payment} onChange={evt => handleInputData(evt, 'payment')}>
-              <option value="" disabled >Choose Payment</option>
-              <option value="DANA">DANA</option>
-              <option value="OVO">OVO</option>
-              <option value="Link Aja">Link Aja</option>
-            </select>
+              <br />
+            </>
+          ))}
+        </div>
+        <div className=" mb-4">
+          <label className="block mb-2 text-md font-medium text-gray-900 ">
+            Genres
           </label>
-          <br /><br />
-          {/* Akhir Select Input */}
+          {genresCheckbox.map((genres) => (
+            <>
+              <input
+                type="checkbox"
+                name="genre"
+                value={genres}
+                checked={inputData.genre.indexOf(genres) !== -1}
+                onChange={handleCheckbox}
+                className="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+              />
+              <label
+                className="ml-2 text-sm font-medium text-gray-900 "
+                key={genres}
+              >
+                {genres}
+              </label>
+              <br />
+            </>
+          ))}
+        </div>
+        <div className="mb-4">
+          <label className="block mb-2 text-md font-medium text-gray-900 ">
+            Payment
+          </label>
+          <select
+            value={inputData.payment}
+            onChange={(evt) => handleInputData(evt, "payment")}
+            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          >
+            <option value="" disabled>
+              Choose Payment
+            </option>
+            <option value="DANA">DANA</option>
+            <option value="OVO">OVO</option>
+            <option value="Link Aja">Link Aja</option>
+          </select>
+        </div>
 
+        <button
+          type="submit"
+          className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >
+          Submit
+        </button>
+      </form>
 
+      {/* Display Table */}
 
-          <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
-            submit
-          </button>
+      <h1 className="text-center text-3xl font-bold my-10"> List Movies</h1>
 
-        </form>
-      </section >
-
-      {/* Display Data */}
-      <div div className="container mx-auto" >
-        <h2 className="mb-2 text-lg font-semibold text-gray-900 ">Movie Data :</h2>
-        <ul className="space-y-1 max-w-md list-inside text-black">
-          <li className="flex items-center">
-            <svg className="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
-            Title : {inputData.title}
-          </li>
-          <li className="flex items-center">
-            <svg className="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
-            Release Date : {inputData.releaseDate}
-          </li>
-          <li className="flex items-center">
-            <svg className="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
-            Description : {inputData.description}
-          </li>
-          <li className="flex items-center">
-            <svg className="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
-            Theatre : {inputData.theatre}
-          </li>
-          <li className="flex items-center">
-            <svg className="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
-            Genre : {inputData.genre}
-          </li>
-          <li className="flex items-center">
-            <svg className="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
-            Payment : {inputData.payment}
-          </li>
-
-        </ul>
-      </div >
-      {/* Akhir Display Data */}
-      <br /> <br />
-
-      <h1 className="text-center text-3xl text-bold"> Daftar Artikel</h1 >
-
-      <table border="1" width="100%">
-        <thead>
-          <tr>
-            <th>Title</th>
-            <th>Release Date</th>
-            <th>Genre</th>
-            <th>Description</th>
-            <th>Theatre</th>
-            <th>Payment</th>
-            <th>Opsi</th>
-          </tr>
-        </thead>
-        <tbody>
-          {movies.map(movie =>
-            <tr key={movie.id}>
-              <td>{movie.title}</td>
-              <td>{movie.releaseDate}</td>
-              <td>{movie.genre}</td>
-              <td>{movie.description}</td>
-              <td>{movie.theatre}</td>
-              <td>{movie.payment}</td>
-              <td>
-                <button onClick={() => handleEdit(movie)} >Edit</button>
-                <button onClick={() => handleDelete(movie.id)}>Hapus</button>
-              </td>
+      <div className="container mx-auto overflow-x-auto relative shadow-lg sm:rounded-lg">
+        <table className="w-full text-sm text-left text-gray-500 ">
+          <thead className="text-xs text-white uppercase bg-green-500 ">
+            <tr>
+              <th scope="col" className="py-3 px-6">
+                Title
+              </th>
+              <th scope="col" className="py-3 px-6">
+                Release Date
+              </th>
+              <th scope="col" className="py-3 px-6">
+                Genre
+              </th>
+              <th scope="col" className="py-3 px-6">
+                Description
+              </th>
+              <th scope="col" className="py-3 px-6">
+                Theatre
+              </th>
+              <th scope="col" className="py-3 px-6">
+                Payment
+              </th>
+              <th scope="col" className="py-3 px-6">
+                <span className="sr-only">Action</span>
+              </th>
             </tr>
-          )}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {movies.map((movie) => (
+              <tr
+                className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+                key={movie.id}
+              >
+                <td
+                  scope="row"
+                  className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                >
+                  {movie.title}
+                </td>
+                <td className="py-4 px-6">{movie.releaseDate}</td>
+                <td className="py-4 px-6">{movie.genre.join(", ")}</td>
+                <td className="py-4 px-6">{movie.description}</td>
+                <td className="py-4 px-6">{movie.theatre}</td>
+                <td className="py-4 px-6">{movie.payment}</td>
+                <td className="py-4 px-6 text-right">
+                  <button
+                    type="button"
+                    onClick={() => handleEdit(movie)}
+                    className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                  >
+                    Edit
+                  </button>
 
-      <br /><hr /><br />
+                  <button
+                    type="button"
+                    onClick={() => handleDelete(movie.id)}
+                    className="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
+                  >
+                    Delete
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
 
+      {/* AKhir Display Table */}
 
-    </>)
-
-
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+    </>
+  );
 }
