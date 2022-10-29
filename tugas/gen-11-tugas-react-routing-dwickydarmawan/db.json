@@ -3,7 +3,10 @@
     {
       "genre": [
         "Fantasy",
-        "Sci-Fi"
+        "Sci-Fi",
+        "Romance",
+        "Horror",
+        "Cartoon"
       ],
       "description": "ini film marvel",
       "title": "Marvel",
@@ -18,7 +21,7 @@
       "genre": [
         "Fantasy"
       ],
-      "description": "ini film batman vs sadnawiudiawuhda",
+      "description": "ini film batman vs sadnawiudiawuhda asudgiawyug diayw awygdiaywg dbaw gd8aw gag wd gawydg aywgd uawydf awdauywfdayfsdufw6dfaysdvaywvfd uatywfd awyf dwa",
       "theatre": "Jakarta",
       "payment": "OVO",
       "id": 2
@@ -31,7 +34,8 @@
         "Fantasy",
         "Romance",
         "Horror",
-        "Sci-Fi"
+        "Sci-Fi",
+        "Action"
       ],
       "description": "Film kartun yang asik",
       "theatre": "Malang",
