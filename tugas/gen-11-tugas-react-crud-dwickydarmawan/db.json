@@ -2,14 +2,12 @@
   "movies": [
     {
       "genre": [
-        "Sci-Fi",
-        "Horror",
-        "Romance",
-        "Fantasy"
+        "Fantasy",
+        "Sci-Fi"
       ],
       "description": "ini film marvel",
       "title": "Marvel",
-      "theatre": "Bandung",
+      "theatre": "Bekasi",
       "payment": "Link Aja",
       "id": 1,
       "releaseDate": "2022-10-27"

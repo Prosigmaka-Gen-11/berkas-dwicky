@@ -1,0 +1,70 @@
+{
+  "movies": [
+    {
+      "genre": [
+        "Fantasy",
+        "Sci-Fi"
+      ],
+      "description": "ini film marvel",
+      "title": "Marvel",
+      "theatre": "Bekasi",
+      "payment": "Link Aja",
+      "id": 1,
+      "releaseDate": "2022-10-27"
+    },
+    {
+      "title": "Batman vs Joker",
+      "releaseDate": "2022-10-31",
+      "genre": [
+        "Fantasy"
+      ],
+      "description": "ini film batman vs sadnawiudiawuhda",
+      "theatre": "Jakarta",
+      "payment": "OVO",
+      "id": 2
+    },
+    {
+      "title": "Disney",
+      "releaseDate": "2022-10-31",
+      "genre": [
+        "Cartoon",
+        "Fantasy",
+        "Romance",
+        "Horror",
+        "Sci-Fi"
+      ],
+      "description": "Film kartun yang asik",
+      "theatre": "Malang",
+      "payment": "DANA",
+      "id": 3
+    },
+    {
+      "title": "Halo hlao asikkk asikkk",
+      "releaseDate": "2022-11-05",
+      "genre": [
+        "Fantasy",
+        "Romance",
+        "Cartoon"
+      ],
+      "description": "yuhuuu",
+      "theatre": "Bekasi",
+      "payment": "DANA",
+      "id": 4
+    },
+    {
+      "title": "Bandung Jakarta asikk",
+      "releaseDate": "2022-10-19",
+      "genre": [
+        "Romance",
+        "Sci-Fi",
+        "Cartoon",
+        "Horror",
+        "Fantasy"
+      ],
+      "description": "halo halo bandung",
+      "theatre": "Bandung",
+      "payment": "DANA",
+      "id": 5
+    }
+  ]
+}
