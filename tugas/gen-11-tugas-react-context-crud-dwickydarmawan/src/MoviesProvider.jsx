@@ -20,7 +20,7 @@ export default function MoviesProvider(props) {
             movies: movies,
             setMovies: setMovies,
             inputData: inputData,
-            setInputData: setInputData
+            setInputData: setInputData,
         }}>
             {props.children}
         </MoviesContext.Provider>

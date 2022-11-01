@@ -29,6 +29,30 @@
       "releaseDate": "",
       "description": "",
       "id": 5
+    },
+    {
+      "title": "Dino",
+      "releaseDate": "2022-11-24",
+      "description": "Dino adalah dino",
+      "id": 6
+    },
+    {
+      "title": "hai",
+      "releaseDate": "2022-11-26",
+      "description": "hai juga",
+      "id": 7
+    },
+    {
+      "title": "halo halo",
+      "releaseDate": "",
+      "description": "",
+      "id": 8
+    },
+    {
+      "title": "bandung",
+      "releaseDate": "",
+      "description": "bandung pride",
+      "id": 9
     }
   ]
 }
