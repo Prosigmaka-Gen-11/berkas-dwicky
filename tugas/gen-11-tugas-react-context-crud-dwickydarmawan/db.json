@@ -11,6 +11,12 @@
       "releaseDate": "2022-11-30",
       "description": "Siapa Pemenangnyaa nih",
       "id": 2
+    },
+    {
+      "title": "Hulk",
+      "releaseDate": "2022-11-16",
+      "description": "Hulk or She Hulk ?",
+      "id": 3
     }
   ]
 }
