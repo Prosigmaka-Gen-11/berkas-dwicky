@@ -16,7 +16,8 @@ export default function Form() {
         contextDariProvider.setInputData({ ...contextDariProvider.inputData, [propName]: evt.target.value })
     }
 
-    async function handleSubmit() {
+    async function handleSubmit(evt) {
+        evt.preventDefault()
         await axios.post("http://localhost:3000/movies", contextDariProvider.inputData)
         contextDariProvider.setInputData({ ...initialForm })
     }
