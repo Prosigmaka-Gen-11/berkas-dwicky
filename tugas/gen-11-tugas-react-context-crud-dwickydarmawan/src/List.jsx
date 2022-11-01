@@ -12,7 +12,7 @@ export default function List() {
 
     useEffect(() => {
         getMovies()
-    }, [contextDariProvider.movies])
+    }, [contextDariProvider.inputData])
     return (
         <>
             <table border="1" width="100%">
