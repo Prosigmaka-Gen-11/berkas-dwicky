@@ -1,0 +1,14 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "Marvel",
+      "releaseDate": "2022-02-02",
+      "description": "Marvel adalah film kesukaanku"
+    },
+    {
+      "title": "dadada",
+      "id": 2
+    }
+  ]
+}
