@@ -1,6 +1,5 @@
 import axios from "axios"
 import { useContext } from "react"
-import List from "./List"
 import { MoviesContext } from "./MoviesProvider"
 
 const initialForm = {
