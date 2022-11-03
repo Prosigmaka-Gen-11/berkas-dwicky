@@ -9,6 +9,7 @@ export default function Home() {
     const { token, handleLogout } = useContext(AuthContext)
 
     const [users, setUsers] = useState([])
+    const [products, setProducts] = useState([])
 
     async function getUsers() {
         const result = await axios.get('https://dummyjson.com/users?limit=5', {
@@ -16,11 +17,16 @@ export default function Home() {
                 Authorization: 'Bearer ' + token
             }
         })
+        const res = await axios.get('https://dummyjson.com/products?limit=5', {
+            headers: {
+                Authorization: 'Bearer ' + token
+            }
+        })
         setUsers(result.data.users)
+        setProducts(res.data.products)
     }
 
     function Logout() {
-
         handleLogout()
     }
 
@@ -34,9 +40,16 @@ export default function Home() {
             <Link to="/quotes" >Ke Quotes</Link>
 
             <ul >
-                {users.map(user =>
-                    <li>{user.firstName} {user.lastName} </li>
-                )}
+                {users.map((user, product) => (
+                    <>
+                        <h3>{user.firstName} {user.lastName} </h3>
+                    </>
+                ))}
+                {products.map((product) => (
+                    <>
+                        <p>{product.title} </p>
+                    </>
+                ))}
             </ul>
             <button onClick={Logout}>Logout</button>
         </>
