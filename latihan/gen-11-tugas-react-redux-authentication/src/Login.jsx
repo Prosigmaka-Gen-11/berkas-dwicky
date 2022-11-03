@@ -27,7 +27,7 @@ export default function Login() {
 
 
 
-    return authSlice.isLogin != null ? <Navigate to="/" /> : (
+    return authSlice.isLogin ? <Navigate to="/" /> : (
         <>
             <form onSubmit={handleLogin}>
                 <label>

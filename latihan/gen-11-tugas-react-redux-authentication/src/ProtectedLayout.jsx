@@ -7,5 +7,5 @@ export default function ProtectedLayout() {
     const authSlice = useSelector(state => state.auth)
     const dispatch = useDispatch()
 
-    return authSlice.isLogin != null ? <Outlet /> : <Navigate to="/login" />
+    return authSlice.isLogin ? <Outlet /> : <Navigate to="/login" />
 }

@@ -11,7 +11,8 @@ export default function Home() {
         <>
             <h1>Ini Home</h1>
             <ul>
-                <li></li>
+                {/* <li>Nama Anda : {authSlice.userData.firstName}</li> */}
+                <li>Nama Anda : {authSlice.userData.firstName}</li>
                 <li>Token Anda : {authSlice.token}</li>
             </ul>
             <button onClick={() => dispatch(handleLogout())}>Logout</button>
