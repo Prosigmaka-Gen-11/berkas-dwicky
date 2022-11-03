@@ -18,11 +18,12 @@ export const authSlice = createSlice({
       state.isLogin = action.payload.token ?? null;
     },
 
-    handleLogout(state) {
+    handleLogout(state, action) {
+      localStorage.removeItem("token");
+      localStorage.removeItem("userData");
       state.userData = {};
       state.token = null;
-      localStorage.removeItem("userData");
-      localStorage.removeItem("token");
+      state.isLogin = null;
     },
   },
 });
